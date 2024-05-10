@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Kalkulator Deret Aritmatika</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="Kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.">
+    <script type="text/javascript">
+        window._ = document.getElementById.bind(document);
+        window.$ = document.querySelector.bind(document);
+        window.$$ = document.querySelectorAll.bind(document);
+        window.defaultSystem = "imperial";
+        localStorage.setItem("theme", "light");
+    </script>
+    <link rel="stylesheet" href="./style.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/all-calculators.js" defer></script>
+</head>
+<body class="bg" style="background-color: transparent !important;">
+	<header class="topnav" id="myTopnav">
+		<a href="#beranda" class="active">Beranda</a>
+		<a href="#kalkulator">Kalkulator</a>
+		<a href="#tentang">Tentang</a>
+	</header>
+	<main>
+		<section class="text-gray-600 body-font" id="beranda">
+			<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+				   <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-neutral-100">Selamat datang
+				   </h1>
+				    <p class="mb-8 leading-relaxed text-neutral-100">Kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.</p>
+			    </div>
+				<div id="kalkulator"></div>
+			</div>
+		</section>
+		<div class="items-center grid grid-cols-12 max-w-7xl mx-auto" style="width: 100%;">
+			<div class="py-2 col-span-12 lg:col-span-4 pb-6 px-4 lg:pb-16" style="width: 350px; padding: 15px;">
+				<div class="calculator-settings">
+					<div class="calculator-setting" id="calculator_form">
+						<div class="calculator-content col">
+							<input type="hidden" value="arithmetic" id="sequence"/>
+							<button type="button" onclick="switcher(this, 'sequence', '')" value="arithmetic" id="sequence-a"></button>
+							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
+								<label class="input col">
+									<p class="input__title">Suku pertama (a)</p>
+									<div class="input-field row">
+										<input type="text" class="outline-none input-field__input" placeholder=""  id="Suku pertama (a)"/>
+									</div>
+								</label>	
+							</div>
+							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
+								<label class="input col">
+									<p class="input__title">Selisih (d)</p>
+									<div class="input-field row">
+										<input type="text" class="outline-none input-field__input" placeholder=""  id="Selisih (d)"/>
+									</div>
+								</label>	
+							</div>
+							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
+								<label class="input col">
+									<p class="input__title">Suku ke-n</p>
+									<div class="input-field row">
+										<input type="text" class="outline-none input-field__input" placeholder=""  id="Suku ke-n"/>
+									</div>
+								</label>	
+							</div>
+						</div>
+						<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
+							<button class="fa fa-trash-o button button--secondary hapus" style="  margin-left: 130px; font-size: 22px; color: #374151; display: flex;" onclick="hapus()"></button>
+							<button class="button button--primary ml-auto" onclick="calculate(this)">Hitung</button>
+						</div>
+						<script type="text/javascript" src="./calculator.js"></script>
+					</div>
+				</div>
+			</div>
+			<div class="py-2 col-span-12 lg:col-span-7 pb-6 px-4 lg:pb-16 top-0" style="padding: 15px; overflow: auto;">
+				<div class="calculator-result calculator-result--error col" id="error-box">
+					<div class="row">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM8.70711
+										7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L8.58579 10L7.29289 11.2929C6.90237 11.6834 6.90237 12.3166 7.29289
+										12.7071C7.68342 13.0976 8.31658 13.0976 8.70711 12.7071L10 11.4142L11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071
+										11.2929L11.4142 10L12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289C12.3166 6.90237 11.6834 6.90237 11.2929 7.29289L10 8.58579L8.70711 7.29289Z" fill="#F87171" class="dark:fill-red-500"></path>
+						</svg>
+						<p class="calculator-error__title">Ada yang salah dalam penginputan.</p>
+					</div>
+					<div class="col" id="error-list">
+					</div>
+				</div>        
+				<span id="calculator_result">
+					<div class="calculator-result col">
+						<div class="result-table__wrapper"> 
+							<table class="result-table">
+								<thead class="dark">
+									<tr>
+										<th class="dark indigo" colspan="2">Hasil</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Deret</th>
+										<td id="result_sequence"></td>
+									</tr>
+									<tr>
+										<th>Nilai suku ke-n</th>
+										<td id="result_nth"></td>
+									</tr>
+									<tr>
+										<th>Jumlah n suku pertama</th>
+										<td id="result_sum"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</span>
+			</div>
+		</div>
+		<section class="text-gray-600 body-font">
+			<div id="tentang" class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+				    <p class="mb-8 leading-relaxed text-neutral-100 text-left">Aplikasi berbasis web ini dibuat untuk memenuhi tugas mata kuliah Kalkulus II oleh Kelompok kami. Kelompok kami terdiri dari: <br>
+						- Diandra Ayuning Ramadanti <br>
+						- Reva Riyantika <br>
+						- Dimas Muhammad Surya <br>
+						- Icep Septian Fajar <br>
+						- Muhammad Fajri Muflih Haffiyan <br>
+						<br>
+					Tugas ini melibatkan pengembangan sebuah aplikasi atau proyek yang menerapkan materi-materi yang ada pada Kalukulus II.</p>
+			    </div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="bg-white dark:bg-gray-800 text-center">
+		<div class="w-full mx-auto max-w-screen-xl p-1 mdfire:items-center md:justify-between">
+		    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Deret Aritmatika
+			</span>
+		</div>
+	</footer>
+	
+<script>
+	window.onscroll = function() {myFunction()};
+	
+	var navbar = document.getElementById("myTopnav");
+	var sticky = navbar.offsetTop;
+	
+	function myFunction() {
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	} else {
+		navbar.classList.remove("sticky");
+	}
+	}
+</script>
+<script async src="./math.min.js"></script>
+<script defer src="./functions.js"></script>
+
+</body>
+</html>

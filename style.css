@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 20px;
   font-weight: 400;
   color: #111827;
+  font-family: 'Courier New';
 }
 .input-field__input--full {
   font-size: 1.125rem;
@@ -443,7 +444,7 @@ html.dark .input-wrapper--square > .input-field__hint {
   white-space: nowrap;
   width: 0;
   z-index: 1;
-  font-family: monospace;
+  font-family: 'Courier New';
 }
 .input__title--work-hours-calculator {
   position: relative;
@@ -1159,6 +1160,7 @@ sub, em {
   white-space: nowrap;
   text-align: left;
   font-weight: 400;
+  font-family: 'Courier New';
 }
 .result-table td.wrap, .result-table th.wrap {
   white-space: normal;

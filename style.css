@@ -582,8 +582,8 @@ html.dark .input-wrapper--square > .input-field__hint {
   padding: 0;
 }
 .button--primary, .button--copy {
-  background-color: #ffb44b;
-  border: 1px solid #ffb44b;
+  background-color: #fda01d;
+  border: 1px solid #fda01d;
   color: white;
 }
 .button--primary:hover:not(:disabled):not(:active), .button--copy:hover:not(:disabled):not(:active) {

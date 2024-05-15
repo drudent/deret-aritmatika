@@ -82,8 +82,8 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
-  color: #111827;
+  font-weight: bold;
+  color: #000000;
   font-family: 'Courier New';
 }
 .input-field__input--full {
@@ -438,7 +438,7 @@ html.dark .input-wrapper--square > .input-field__hint {
   position: relative;
   color: #000000;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 20px;
   min-height: 20px;
   white-space: nowrap;
@@ -1159,7 +1159,7 @@ sub, em {
   line-height: 1.25rem;
   white-space: nowrap;
   text-align: left;
-  font-weight: 400;
+  font-weight: bold;
   font-family: 'Courier New';
 }
 .result-table td.wrap, .result-table th.wrap {
@@ -1225,7 +1225,7 @@ sub, em {
   letter-spacing: 0.05em;
   font-size: 14px;
   line-height: 1rem;
-  font-weight: 500;
+  font-weight: bold;
   font-family: monospace;
 }
 .result-table th.indigo span {

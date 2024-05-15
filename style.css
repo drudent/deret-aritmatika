@@ -1159,7 +1159,6 @@ sub, em {
   white-space: nowrap;
   text-align: left;
   font-weight: 400;
-  font-family: monospace;
 }
 .result-table td.wrap, .result-table th.wrap {
   white-space: normal;

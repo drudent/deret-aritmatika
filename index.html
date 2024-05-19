@@ -28,19 +28,19 @@
 		<section class="text-gray-600 body-font">
 			<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-				   <h1 class="font- sm:text-4xl text-3xl mb-4 font-bold text-neutral-100">Selamat datang
+				   <h1 class="font-mono sm:text-4xl text-3xl mb-4 font-bold text-neutral-100">Selamat datang
 				   </h1>
-				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left">Website ini berisi kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.<br>
+				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">Website ini berisi kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.<br>
 						<br>Bentuk umum deret aritmatika dapat ditulis: <br>
 
 						a + (a + d) + (a + 2d) + (a + 3d) + …
 					<br>
 					</p>
-					<ul class="font-mono m-1 leading-relaxed text-neutral-100 text-left">dengan 
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left">a = suku pertama</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left">d = selisih</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left">𝑢<sub>𝑛</sub> = (a + (n – 1) d) = mencari suku ke-n</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left">S<sub>𝑛</sub>= n/2 (2a + (n − 1) d) = mencari jumlah suku pertama</li>
+					<ul class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">dengan 
+						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">a = suku pertama</li>
+						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">d = selisih</li>
+						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">𝑢<sub>𝑛</sub> = (a + (n – 1) d) = mencari suku ke-n</li>
+						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">S<sub>𝑛</sub>= n/2 (2a + (n − 1) d) = mencari jumlah suku pertama</li>
 					</ul>
 					
 			    </div>
@@ -56,32 +56,32 @@
 							<button type="button" onclick="switcher(this, 'sequence', '')" value="arithmetic" id="sequence-a"></button>
 							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
 								<label class="input col">
-									<p class="input__title">Suku pertama (a)</p>
+									<p class="input__title" style="font-size: 16px;">Suku pertama (a)</p>
 									<div class="input-field row">
-										<input autocomplete="off" type="text" class="outline-none input-field__input" placeholder=""  id="Suku pertama (a)"/>
+										<input autocomplete="off"  style="font-size: 16px;" type="text" class="outline-none input-field__input" placeholder=""  id="Suku pertama (a)"/>
 									</div>
 								</label>	
 							</div>
 							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
 								<label class="input col">
-									<p class="input__title">Selisih (d)</p>
+									<p class="input__title" style="font-size: 16px;">Selisih (d)</p>
 									<div class="input-field row">
-										<input autocomplete="off" type="text" class="outline-none input-field__input" placeholder=""  id="Selisih (d)"/>
+										<input autocomplete="off" type="text"  style="font-size: 16px;" class="outline-none input-field__input" placeholder=""  id="Selisih (d)"/>
 									</div>
 								</label>	
 							</div>
 							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
 								<label class="input col">
-									<p class="input__title">Suku ke-n</p>
+									<p class="input__title" style="font-size: 16px;">Suku ke-n</p>
 									<div class="input-field row">
-										<input autocomplete="off" type="text" class="outline-none input-field__input" placeholder=""  id="Suku ke-n"/>
+										<input autocomplete="off" type="text"  style="font-size: 16px;" class="outline-none input-field__input" placeholder=""  id="Suku ke-n"/>
 									</div>
 								</label>	
 							</div>
 						</div>
 						<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row" >
 							<button class="fa fa-trash-o button button--secondary hapus" style="margin-left: 130px; font-size: 22px; color: #374151; display: flex;" onclick="hapus()"></button>
-							<button class="button button--primary ml-auto" onclick="calculate(this)">Hitung</button>
+							<button class="button button--primary ml-auto"  style="font-size: 16px;" onclick="calculate(this)">Hitung</button>
 						</div>
 						<script type="text/javascript" src="./calculator.js"></script>
 					</div>
@@ -96,7 +96,7 @@
 										12.7071C7.68342 13.0976 8.31658 13.0976 8.70711 12.7071L10 11.4142L11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071
 										11.2929L11.4142 10L12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289C12.3166 6.90237 11.6834 6.90237 11.2929 7.29289L10 8.58579L8.70711 7.29289Z" fill="#F87171" class="dark:fill-red-500"></path>
 						</svg>
-						<p class="calculator-error__title">Ada yang salah dalam penginputan.</p>
+						<p class="calculator-error__title"  style="font-size: 16px;">Ada yang salah dalam penginputan.</p>
 					</div>
 					<div class="col" id="error-list">
 					</div>
@@ -105,24 +105,24 @@
 					<div class="calculator-result col">
 						<div class="result-table__wrapper"> 
 							<table class="result-table">
-								<thead class="dark">
+								<thead class="">
 									<tr>
-								    <th class="dark indigo" colspan="2">Hasil</th>
+								    <th class="dark indigo" colspan="2" style="font-size: 16px;">Hasil</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<th>Deret</th>
-										<td id="result_sequence"></td>
+										<th style="font-size: 16px;">Deret</th>
+										<td id="result_sequence" style="font-size: 16px;"></td>
 									</tr>
 									<tr>
-										<th>Nilai suku ke-n</th>
-                   						<td style="display: none;" id="steps_result_nth"></td>
+										<th style="font-size: 16px;">Nilai suku ke-n</th>
+                   						<td style="display: none; font-size: 16px;" id="steps_result_nth"></td>
 										<td id="result_nth"></td>
 									</tr>
 									<tr>
-										<th>Jumlah n suku pertama</th>
-                    					<td style="display: none;" id="steps_result_sum"></td>
+										<th style="font-size: 16px;">Jumlah n suku pertama</th>
+                    					<td style="display: none; font-size: 16px;" id="steps_result_sum"></td>
 										<td id="result_sum"></td>
 									</tr>
 								</tbody>
@@ -133,14 +133,14 @@
 				<label class="inline-flex items-center cursor-pointer mt-4 inline-flex justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-offset-2 sm:ml-0 sm:w-auto sm:text-sm">
 				    <input autocomplete="off" id="toggle" onclick="toggleSteps()" type="checkbox" value="" class="sr-only peer">
 				    <div class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-[#452f10] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-[#fda01d]"></div>
-				    <span class="select-none ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tampilkan langkah</span>
+				    <span class="select-none ms-3 text-sm font-medium text-gray-900 dark:text-gray-300" style="font-size: 16px;">Tampilkan langkah</span>
 				</label>
 			</div>
 		</div>
 		<section class="text-gray-600 body-font">
 			<div id="tentang" class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left">Aritmatika sangat penting dalam kehidupan sehari-hari karena digunakan dalam berbagai situasi, seperti berbelanja, mengatur keuangan, menghitung waktu, dan membuat rencana anggaran. Misalnya, saat menghitung harga barang belanjaan, menghitung waktu perjalanan, atau membagi-bagi makanan di antara teman-teman, kita menggunakan konsep aritmatika. <br>
+				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">Aritmatika sangat penting dalam kehidupan sehari-hari karena digunakan dalam berbagai situasi, seperti berbelanja, mengatur keuangan, menghitung waktu, dan membuat rencana anggaran. Misalnya, saat menghitung harga barang belanjaan, menghitung waktu perjalanan, atau membagi-bagi makanan di antara teman-teman, kita menggunakan konsep aritmatika. <br>
 					<br>
 					 Aplikasi berbasis web ini dibuat untuk memenuhi tugas mata kuliah Kalkulus II oleh Kelompok kami. Kelompok kami terdiri dari: <br>
 					- Diandra Ayuning Ramadanti <br>
@@ -154,7 +154,7 @@
 	</main>
 	<footer class="bg-white dark:bg-gray-800 text-center">
 		<div class="w-full mx-auto max-w-screen-xl p-1 mdfire:items-center md:justify-between">
-		    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">2024 Deret Aritmatika
+		    <span class="text-sm text-neutral-100 sm:text-center dark:text-neutral-100" style="font-size: 16px;">2024 Kalkulator Deret Aritmatika
 			</span>
 		</div>
 	</footer>

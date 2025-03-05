@@ -1,179 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
-    <title>Kalkulator Deret Aritmatika</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <meta name="description" content="Kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.">
-    <script type="text/javascript">
-        window._ = document.getElementById.bind(document);
-        window.$ = document.querySelector.bind(document);
-        window.$$ = document.querySelectorAll.bind(document);
-        window.defaultSystem = "imperial";
-        localStorage.setItem("theme", "light");
-    </script>
-    <link rel="stylesheet" href="./style.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdn.tailwindcss.com"></script>
-    <script src="./assets/js/all-calculators.js" defer></script>
+    <title>Icep Septian Fajar</title>
 </head>
-<body class="bg" style="background-color: transparent !important;">
-	<header class="topnav" id="myTopnav">
-		<a href="#" class="active">Beranda</a>
-		<a href="#kalkulator">Kalkulator</a>
-		<a href="#tentang">Tentang</a>
-	</header>
-	<main>
-		<section class="text-gray-600 body-font">
-			<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-				   <h1 class="font-mono sm:text-4xl text-3xl mb-4 font-bold text-neutral-100">Selamat datang
-				   </h1>
-				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">Website ini berisi kalkulator untuk mencari suku ke-n dan menghitung jumlah suku n pertama dari deret aritmatika.<br>
-						<br>Bentuk umum deret aritmatika dapat ditulis: <br>
+<body>
+    <header>
+        <h1>Icep Septian Fajar</h1>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
 
-						a + (a + d) + (a + 2d) + (a + 3d) + …
-					<br>
-					</p>
-					<ul class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">dengan 
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">a = suku pertama</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">d = selisih</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">𝑢<sub>𝑛</sub> = (a + (n – 1) d) = mencari suku ke-n</li>
-						<li class="font-mono m-1 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">S<sub>𝑛</sub>= n/2 (2a + (n − 1) d) = mencari jumlah suku pertama</li>
-					</ul>
-					
-			    </div>
-				<div id="kalkulator"></div>
-			</div>
-		</section>
-		<div class="items-center grid grid-cols-12 max-w-7xl mx-auto" style="width: 100%;">
-			<div class="py-2 col-span-12 lg:col-span-4 pb-6 px-4 lg:pb-16" style="width: 350px; padding: 15px;">
-				<div class="calculator-settings">
-					<div class="calculator-setting" id="calculator_form">
-						<div class="calculator-content col">
-							<input type="hidden" value="arithmetic" id="sequence"/>
-							<button type="button" onclick="switcher(this, 'sequence', '')" value="arithmetic" id="sequence-a"></button>
-							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
-								<label class="input col">
-									<p class="input__title" style="font-size: 16px;">Suku pertama (a)</p>
-									<div class="input-field row">
-										<input autocomplete="off"  style="font-size: 16px;" type="text" class="outline-none input-field__input" placeholder=""  id="Suku pertama (a)"/>
-									</div>
-								</label>	
-							</div>
-							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
-								<label class="input col">
-									<p class="input__title" style="font-size: 16px;">Selisih (d)</p>
-									<div class="input-field row">
-										<input autocomplete="off" type="text"  style="font-size: 16px;" class="outline-none input-field__input" placeholder=""  id="Selisih (d)"/>
-									</div>
-								</label>	
-							</div>
-							<div class="input-wrapper row sequence related-to-sequence-arithmetic">
-								<label class="input col">
-									<p class="input__title" style="font-size: 16px;">Suku ke-n</p>
-									<div class="input-field row">
-										<input autocomplete="off" type="text"  style="font-size: 16px;" class="outline-none input-field__input" placeholder=""  id="Suku ke-n"/>
-									</div>
-								</label>	
-							</div>
-						</div>
-						<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row" >
-							<button class="fa fa-trash-o button button--secondary hapus" style="margin-left: 130px; font-size: 22px; color: #374151; display: flex;" onclick="hapus()"></button>
-							<button class="button button--primary ml-auto"  style="font-size: 16px;" onclick="calculate(this)">Hitung</button>
-						</div>
-						<script type="text/javascript" src="./calculator.js"></script>
-					</div>
-				</div>
-			</div>
-			<div class="py-2 col-span-12 lg:col-span-7 pb-6 px-4 lg:pb-16 top-0" style="padding: 15px; overflow: auto;">
-				<div class="calculator-result calculator-result--error col" id="error-box">
-					<div class="row">
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM8.70711
-										7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L8.58579 10L7.29289 11.2929C6.90237 11.6834 6.90237 12.3166 7.29289
-										12.7071C7.68342 13.0976 8.31658 13.0976 8.70711 12.7071L10 11.4142L11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071
-										11.2929L11.4142 10L12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289C12.3166 6.90237 11.6834 6.90237 11.2929 7.29289L10 8.58579L8.70711 7.29289Z" fill="#F87171" class="dark:fill-red-500"></path>
-						</svg>
-						<p class="calculator-error__title"  style="font-size: 16px;">Ada yang salah dalam penginputan.</p>
-					</div>
-					<div class="col" id="error-list">
-					</div>
-				</div>        
-				<span id="calculator_result">
-					<div class="calculator-result col">
-						<div class="result-table__wrapper"> 
-							<table class="result-table">
-								<thead class="">
-									<tr>
-								    <th class="dark indigo" colspan="2" style="font-size: 16px;">Hasil</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th style="font-size: 16px;">Deret</th>
-										<td id="result_sequence" style="font-size: 16px;"></td>
-									</tr>
-									<tr>
-										<th style="font-size: 16px;">Nilai suku ke-n</th>
-                   						<td style="display: none; font-size: 16px;" id="steps_result_nth"></td>
-										<td id="result_nth"></td>
-									</tr>
-									<tr>
-										<th style="font-size: 16px;">Jumlah n suku pertama</th>
-                    					<td style="display: none; font-size: 16px;" id="steps_result_sum"></td>
-										<td id="result_sum"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</span>
-				<label class="inline-flex items-center cursor-pointer mt-4 inline-flex justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-offset-2 sm:ml-0 sm:w-auto sm:text-sm">
-				    <input autocomplete="off" id="toggle" onclick="toggleSteps()" type="checkbox" value="" class="sr-only peer">
-				    <div class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-[#452f10] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-[#fda01d]"></div>
-				    <span class="select-none ms-3 text-sm font-medium text-gray-900 dark:text-gray-300" style="font-size: 16px;">Tampilkan langkah</span>
-				</label>
-			</div>
-		</div>
-		<section class="text-gray-600 body-font">
-			<div id="tentang" class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-			    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-				    <p class="font-mono m-2 leading-relaxed text-neutral-100 text-left" style="font-size: 19px;">Aritmatika sangat penting dalam kehidupan sehari-hari karena digunakan dalam berbagai situasi, seperti berbelanja, mengatur keuangan, menghitung waktu, dan membuat rencana anggaran. Misalnya, saat menghitung harga barang belanjaan, menghitung waktu perjalanan, atau membagi-bagi makanan di antara teman-teman, kita menggunakan konsep aritmatika. <br>
-					<br>
-					 Aplikasi berbasis web ini dibuat untuk memenuhi tugas mata kuliah Kalkulus II oleh Kelompok kami. Kelompok kami terdiri dari: <br>
-					- Diandra Ayuning Ramadanti <br>
-					- Reva Riyantika <br>
-					- Dimas Muhammad Surya <br>
-					- Icep Septian Fajar <br>
-					- Muhammad Fajri Muflih Haffiyan <br>
-			    </div>
-			</div>
-		</section>
-	</main>
-	<footer class="bg-white dark:bg-gray-800 text-center">
-		<div class="w-full mx-auto max-w-screen-xl p-1 mdfire:items-center md:justify-between">
-		    <span class="text-sm text-neutral-100 sm:text-center dark:text-neutral-100" style="font-size: 16px;">2024 Kalkulator Deret Aritmatika
-			</span>
-		</div>
-	</footer>
-<script>
-	window.onscroll = function() {myFunction()};
-	
-	var navbar = document.getElementById("myTopnav");
-	var sticky = navbar.offsetTop;
-	
-	function myFunction() {
-	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky")
-	} else {
-		navbar.classList.remove("sticky");
-	}
-	}
-</script>
-<script async src="./math.min.js"></script>
-<script defer src="./functions.js"></script>
+    <section id="tentang">
+        <img src="foto-icep.jpg" alt="Icep Septian Fajar" width="200">
+        <p>Perkenalkan, saya Icep Septian Fajar, seorang [Profesi Anda]. Saya memiliki pengalaman dalam [Bidang Anda].</p>
+        <a href="portofolio.html">Lihat Portofolio</a>
+    </section>
 
+    <section id="layanan">
+        <h2>Layanan</h2>
+        <p>Saya menawarkan layanan [Layanan 1], [Layanan 2], dan [Layanan 3].</p>
+        <ul>
+            <li>[Layanan 1]</li>
+            <li>[Layanan 2]</li>
+            <li>[Layanan 3]</li>
+        </ul>
+    </section>
+
+    <section id="portofolio">
+        <h2>Portofolio</h2>
+        <article>
+            <img src="proyek1.jpg" alt="Proyek 1" width="300">
+            <p>Deskripsi singkat proyek 1.</p>
+        </article>
+        <article>
+            <img src="proyek2.jpg" alt="Proyek 2" width="300">
+            <p>Deskripsi singkat proyek 2.</p>
+        </article>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <p>Hubungi saya melalui:</p>
+        <ul>
+            <li>Email: <a href="mailto:icep@example.com">icep@example.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/icep">linkedin.com/in/icep</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Icep Septian Fajar</p>
+    </footer>
 </body>
 </html>

@@ -1,58 +1,157 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Icep Septian Fajar</title>
-</head>
-<body>
-    <header>
-        <h1>Icep Septian Fajar</h1>
-        <nav>
-            <a href="#tentang">Tentang</a>
-            <a href="#layanan">Layanan</a>
-            <a href="#portofolio">Portofolio</a>
-            <a href="#kontak">Kontak</a>
-        </nav>
-    </header>
-
-    <section id="tentang">
-        <img src="foto-icep.jpg" alt="Icep Septian Fajar" width="200">
-        <p>Perkenalkan, saya Icep Septian Fajar, seorang [Profesi Anda]. Saya memiliki pengalaman dalam [Bidang Anda].</p>
-        <a href="portofolio.html">Lihat Portofolio</a>
-    </section>
-
-    <section id="layanan">
-        <h2>Layanan</h2>
-        <p>Saya menawarkan layanan [Layanan 1], [Layanan 2], dan [Layanan 3].</p>
-        <ul>
-            <li>[Layanan 1]</li>
-            <li>[Layanan 2]</li>
-            <li>[Layanan 3]</li>
-        </ul>
-    </section>
-
-    <section id="portofolio">
-        <h2>Portofolio</h2>
-        <article>
-            <img src="proyek1.jpg" alt="Proyek 1" width="300">
-            <p>Deskripsi singkat proyek 1.</p>
-        </article>
-        <article>
-            <img src="proyek2.jpg" alt="Proyek 2" width="300">
-            <p>Deskripsi singkat proyek 2.</p>
-        </article>
-    </section>
-
-    <section id="kontak">
-        <h2>Kontak</h2>
-        <p>Hubungi saya melalui:</p>
-        <ul>
-            <li>Email: <a href="mailto:icep@example.com">icep@example.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/icep">linkedin.com/in/icep</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Icep Septian Fajar</p>
-    </footer>
-</body>
+<html lang="id">
+    <head>
+        <title>Icep Septian Fajar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="assets/icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Jaldi' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="header">
+            <div>
+                <div class="header-logo inline">
+                    <img src="assets/icon.png" alt="">
+                    <a href="index.html" class="logo-text">Icep Septian Fajar</a>
+                </div>
+                <ul class="header-menu">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content -->
+        <div>
+            <!-- Beranda -->
+            <div id="beranda" class="beranda">
+                <div class="beranda-img">
+                    <img src="assets/pfp.png" alt="">
+                </div>
+                <div class="beranda-info">
+                    <div>
+                        <p>Perkenalkan, nama saya Icep Septian Fajar, seorang mahasiswa Informatika Semester 4 Universitas Siliwangi. Berfokus pada bidang Web Development, Cyber Security dan Jaringan Komputer.</p>
+                    </div>
+                    <div class="beranda-info-btn">
+                        <a href="#portfolio">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tentang -->
+            <div id="tentang" class="box">
+                <div class="box-title">
+                    <h3>Tentang</h3>
+                </div>
+                <div>
+                    <p>Perkenalkan, nama saya Icep Septian Fajar, seorang mahasiswa Informatika Semester 4 Universitas Siliwangi. Berfokus pada bidang Web Development, Cyber Security dan Jaringan Komputer.</p>
+                    <p>Saya mempunyai minat untuk berkarir sebagai IT profesional.</p>
+                </div>
+            </div>
+            <!-- Keahlian -->
+            <div class="box">
+                <div class="box-title">
+                    <h3>Keahlian</h3>
+                </div>
+                <div>
+                    <div class="skill center">
+                        <div class="inline skill-list">
+                            <img src="assets/html-icon.png" alt="HTML">
+                            <p>HTML (Intermediate)</p>
+                        </div>
+                        <div class="inline skill-list">
+                            <img src="assets/css-icon.png" alt="CSS">
+                            <p>CSS (Intermediate)</p>
+                        </div>
+                        <div class="inline skill-list">
+                            <img src="assets/mysql-icon.png" alt="MySQL">
+                            <p>MySQL (Intermediate)</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Mengapa memperkerjakan saya?</p>
+                    <p>Memperkerjakan saya akan membawa keahlian dan pengalaman yang relevan untuk mendukung tujuan tim dan perusahaan. Saya memiliki kemampuan untuk bekerja secara efektif dalam tim dan cepat beradaptasi dengan perubahan, sehingga dapat memberikan kontribusi positif.</p>
+                </div>
+            </div>
+            <!-- Testimoni -->
+            <div class="box">
+                <div class="box-title">
+                    <h3>Testimoni</h3>
+                </div>
+                <div class="inline">
+                    <div class="box-testimoni">
+                        <img src="" alt="">
+                        <p>"Saya sangat merekomendasikan layanan mereka, karena mereka tidak hanya  memenuhi harapan kami, tetapi juga melampauinya dengan solusi inovatif."</p>
+                        <p class="name">-John</p>
+                    </div>
+                    <div class="box-testimoni">
+                        <img src="" alt="">
+                        <p>"Tim ini berhasil menciptakan situs web yang sesuai dengan visi kami,  dengan desain yang menarik dan fungsionalitas yang luar biasa."</p>
+                        <p class="name">-William</p>
+                    </div>
+                    <div class="box-testimoni">
+                        <img src="" alt="">
+                        <p>"Pengalaman bekerja dengan tim pengembangan web ini sangat memuaskan,  mereka selalu profesional dan responsif terhadap kebutuhan kami."</p>
+                        <p class="name">-Dave</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio -->
+            <div id="portfolio" class="box">
+                <div class="box-title">
+                    <h3>Portfolio</h3>
+                </div>
+                <div>
+                    <div>
+                        <div class="inline port">
+                            <img src="assets/smpitalasyariyyah.png" alt="">
+                            <div class="portfolio-text">
+                                <h4>Website SMP IT Al-Asyariyyah</h4>
+                                <p>Website SMP IT Al-Asyariyyah adalah platform resmi yang menyediakan  informasi tentang kegiatan, program, dan fasilitas yang ditawarkan oleh  SMP IT Al-Asyariyyah.</p>
+                                <div class="port-link center">
+                                    <a href="https://smpitalasyariyyah.infy.uk">Kunjungi</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline port">
+                            <img src="assets/deretaritmatika.png" alt="">
+                            <div  class="portfolio-text">
+                                <h4>Kalkulator Deret Aritmatika</h4>
+                                <p>Kalkulator Deret Aritmatika adalah sebuah aplikasi berbasis web  yang dirancang untuk menghitung dan menganalisis deret aritmatika.
+                                <div class="port-link center">
+                                    <a href="https://drudent.github.io/deret-aritmatik/">Kunjungi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kontak -->
+            <div id="kontak" class="box">
+                <div class="box-title">
+                    <h3>Kontak</h3>
+                </div>
+                <div class="kontak">
+                    <div class="center">
+                        <div class="kontak-list inline">
+                            <img src="assets/email-icon.png" alt="">
+                            <p>icpsptfjr@gmail.com</p>
+                        </div>
+                        <div class="kontak-list inline">
+                            <img src="assets/instagram-icon.png" alt="">
+                            <a href="https://www.instagram.com/icepseptian/"><p>@icepseptian</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="box center">
+            <p>© 2025 Icep Setian Fajar</p>
+        </div>
+    </body>
 </html>
